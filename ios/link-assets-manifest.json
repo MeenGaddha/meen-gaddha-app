@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Fonts.js",
+      "sha1": "f862f9963d5da29b74722e47210ddf22ab4a01ee"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-Bold.ttf",
+      "sha1": "d60332caa094a9bb4541c82d9503278c931e8e35"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-ExtraLight.ttf",
+      "sha1": "430e0d024bfa1ef5a1ee48d138ff35134fbd7df0"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-Light.ttf",
+      "sha1": "ce928b20db4614fcb4650c41eaabc4f3a3d49943"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-Medium.ttf",
+      "sha1": "a537f703a548b2d2173ab7be632cdd4592cd7f14"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-Regular.ttf",
+      "sha1": "a5c007bf9309bff551b3ee59021626a3f5af3e58"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-SemiBold.ttf",
+      "sha1": "fecee3b6ef3d202ea44b231aa649faa1f44bbcb9"
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansArabic-Thin.ttf",
+      "sha1": "b1c3e146f0e21b7377f8dbda59264433c70d61e8"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "sha1": "af66d4013825f41cc722a541d36629696d1c2d5a"
+    }
+  ]
+}
