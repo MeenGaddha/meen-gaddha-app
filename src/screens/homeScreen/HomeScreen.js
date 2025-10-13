@@ -23,7 +23,7 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <Header onProfilePress={handleProfilePress} />
+      <Header onProfilePress={() => navigation.navigate('SignIn')} />
 
       {/* ContentScreen */}
       <SafeAreaView style={styles.content} edges={['left', 'right']}>
