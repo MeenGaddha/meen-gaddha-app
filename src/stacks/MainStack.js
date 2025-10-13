@@ -7,6 +7,7 @@ import HomeScreen from '../screens/homeScreen/HomeScreen';
 import CategoryScreen from '../screens/categoryScreen/CategoryScreen';
 import Header from '../components/shared/Header';
 import BottomTab from '../components/shared/BottomTab';
+import GameDescriptionScreen from '../screens/gameDescriptionScreen/GameDescriptionScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -25,6 +26,7 @@ const MainStack = () => {
         <Stack.Screen name="CategoryScreen" component={CategoryScreen} />     
         <Stack.Screen name="Header" component={Header} /> 
         <Stack.Screen name="BottomTab" component={BottomTab} /> 
+        <Stack.Screen name="GameDescriptionScreen" component={GameDescriptionScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

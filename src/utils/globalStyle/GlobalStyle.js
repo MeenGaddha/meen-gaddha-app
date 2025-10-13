@@ -41,6 +41,8 @@ const globalStyles = StyleSheet.create({
   buttonText: {                           //نص داخل الازرار
     color: colors.button.text,
     fontFamily: Fonts.PrimaryFontBold,
+    fontSize: 16,
+    fontWeight: "bold",
   },
 
   // Text Styles 
