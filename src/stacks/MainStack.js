@@ -28,6 +28,7 @@ const MainStack = () => {
       >
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
+
         {/* <Stack.Screen name="CategoryScreen" component={CategoryScreen} />      */}
         <Stack.Screen name="Header" component={Header} />
         <Stack.Screen name="BottomTab" component={BottomTab} />
