@@ -17,13 +17,13 @@ const sections = [
   { id: 1, name: 'الاشتراك', icon: SubscribeIconFooter, screen: 'SubscribeScreen' },
   { id: 2, name: 'الفئات', icon: CategoriesIconFooter, screen: 'CategoryScreen' },
   { id: 3, name: 'الرئيسية', icon: HomeIconFooter, screen: 'HomeScreen' },
-  { id: 4, name: 'طريقة اللعب', icon: HowToPlayIconFooter, screen: 'HowToPlayScreen' },
+  { id: 4, name: 'طريقة اللعب', icon: HowToPlayIconFooter, screen: 'GameDescriptionScreen' },
   { id: 5, name: 'حسابي', icon: ProfileIconFooter, screen: 'ProfileScreen' },
 ];
 
 const BottomTab = () => {
   const navigation = useNavigation();
-  const route = useRoute(); // اسم الشاشة الحالية
+  const route = useRoute(); // معلومات الشاشة الحالية
 
   return (
     <View style={styles.container}>
