@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, TextInput, Image, Text, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, TextInput, Image, Text, View, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters'
 import globalStyles from "../../utils/globalStyle/GlobalStyle";
@@ -6,11 +6,21 @@ import colors from '../../utils/colors/Colors';
 import Lock from "../../../assets/icons/Lock";
 import Mail from "../../../assets/icons/Mail";
 import CustomInput from '../../components/shared/CustomInput'
+// import Topimage from '../../../assets/images/Topimage.svg'; غير الصوره وخليها اس في جي 
+
 
 const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password,setPassword] = useState('');
 
+  const handleLogin = () => {
+    if (!email.trim() || !password.trim()){
+      Alert.alert("خطأ ⚠️", "يرجى إدخال البريد الإلكتروني وكلمة المرور.")
+      return;
+    }
+    Alert.alert("تم ✅", "تم تسجيل الدخول بنجاح!");
+    navigation.navigate('HomeScreen')
+  }
   return (
     <View style={styles.container}>
       <View style={styles.topimageContainer}>
@@ -50,7 +60,7 @@ const SignInScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={globalStyles.buttonLarge} onPress={() => navigation.navigate('HomeScreen')}>
+        <TouchableOpacity style={globalStyles.buttonLarge} onPress={handleLogin}>
           <Text style={[globalStyles.mainTitle, { color: colors.text.onDark }]}>تسجيل الدخول</Text>
         </TouchableOpacity>
       </View>
@@ -66,11 +76,11 @@ const styles = StyleSheet.create({
 
   },
   topimageContainer: {
-    height: verticalScale(230),
+    height: verticalScale(200),
   },
   topImage: {
-    width: scale(320),
-    height: verticalScale(230),
+    width: scale(300),
+    height: verticalScale(195),
   },
   welcomeTextContainer: {
     alignItems: 'center',

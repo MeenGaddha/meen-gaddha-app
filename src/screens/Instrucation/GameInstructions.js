@@ -4,6 +4,9 @@ import { scale, verticalScale, moderateScale } from 'react-native-size-matters'
 import Onboarding from 'react-native-onboarding-swiper';
 import { Fonts } from '../../../assets/fonts/Fonts';
 import { useNavigation } from '@react-navigation/native';
+import TeamImage from '../../../assets/images/TeamImage.svg';
+ import Choose_Categories from '../../../assets/images/Choose_Categories.svg';
+
 
 const DoneButtonComponent = ({ ...rest}) =>{
   return(
@@ -67,14 +70,14 @@ const GameInstructions1 = () => {
       color:"#690303"
     }}
      subTitleStyles={{
-      fontFamily:Fonts.TajawalRegular,
+      fontFamily:Fonts.fontMedium,
       fontSize:moderateScale(15),
       color:"#B50C0C"
      }}
       pages={[
         {
           backgroundColor: '#F4F4F4',
-          image: <Image source={require('../../../assets/images/TeamImage.png')} style={{width:scale(300),height:verticalScale(190)}}/>,
+          image: <TeamImage width={scale(330)} height={verticalScale(200)}/>,
           title: 'جمّع فريقك وتحدّوا بعض!',
           subtitle: 'اختبروا معلوماتكم في أجواء مليانة تحدي وحماس 💡🔥\n كل سؤال يرفعكم… واللي يجمع أعلى نقاط هو اللي يفوز 🏆',
         },
@@ -97,7 +100,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonComponentText:{
-    fontFamily:Fonts.TajawalRegular,
+    fontFamily:Fonts.fontMedium,
     color:"#690303",
     fontSize:moderateScale(14)
   }

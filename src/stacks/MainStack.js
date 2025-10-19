@@ -2,7 +2,6 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from '../screens/auth/LoginScreen';
 import HomeScreen from '../screens/homeScreen/HomeScreen';
 // import CategoryScreen from '../screens/categoryScreen/CategoryScreen';
 import Header from '../components/shared/Header';
@@ -11,6 +10,7 @@ import GameInstructions1 from "../screens/Instrucation/GameInstructions.js";
 import SplashScreen from "../screens/auth/SplashScreen.js";
 import SignUpScreen from "../screens/auth/SignUpScreen.js";
 import SignInScreen from "../screens/auth/SignInScreen.js";
+import MyProfileScreen from '../screens/profile/MyProfileScreen.js';
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +21,7 @@ const MainStack = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          animation: 'none',
         }}
         
       >
@@ -32,6 +33,7 @@ const MainStack = () => {
         <Stack.Screen name="GameInstructions1" component={GameInstructions1} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
+        <Stack.Screen name="ProfileScreen" component={MyProfileScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
