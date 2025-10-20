@@ -9,16 +9,12 @@ import { mostPopularCategories, exclusiveCategories } from '../../data/Categorie
 import { useNavigation } from '@react-navigation/native';
 import globalStyles from '../../utils/globalStyle/GlobalStyle';
 import Colors from '../../utils/colors/Colors';
-import LogoWithQu from '../../../assets/images/logoWithQu.svg';
+import LogoWhite from '../../../assets/images/LogoWhite.svg';
+import QuestionMarkLogo from '../../../assets/images/QuestionMarkLogo.svg';
 
-const { width } = Dimensions.get('window');
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-
-  const handleProfilePress = () => {
-    console.log('Profile button pressed');
-  };
 
   return (
     <View style={styles.container}>
@@ -27,10 +23,14 @@ const HomeScreen = () => {
 
       {/* ContentScreen */}
       <SafeAreaView style={styles.content} edges={['left', 'right']}>
-        <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 100 }}>
+        <ScrollView contentContainerStyle={{ paddingBottom: 100 }} showsVerticalScrollIndicator={false}>
           <View style={styles.sectionStartGame}>
+
             {/* Logo */}
-            <LogoWithQu style={styles.logo}/>
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: verticalScale(-14) }}>
+              <LogoWhite width={75} height={75} />   
+              <QuestionMarkLogo width={110} height={110} style={{ marginLeft: scale(-18), marginTop: verticalScale(8)}} />
+            </View>
 
             {/* Title */}
             <Text style={styles.sectionTitle}>فريقكم سر قوتكم.. قد التحدي؟</Text>
@@ -95,26 +95,26 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingHorizontal: 16,
-    paddingTop: 25,
+    paddingHorizontal: scale(16),
+    paddingTop: verticalScale(25),
   },
   sectionStartGame: {
     width: '100%',
     backgroundColor: Colors.background.dark,
-    borderRadius: 20,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
+    borderRadius: moderateScale(20),
+    paddingVertical: verticalScale(10),
     alignItems: 'center',
   },
   logo: {
-    width: width * 0.45, 
-    height: width * 0.20,
+    width: 45,
+    height: 20,
     resizeMode: 'contain',
   },
   sectionTitle: {
     ...globalStyles.mainTitle,
     color: Colors.text.onDark,
-    marginBottom: 6,
+    marginTop: verticalScale(-8),
+    marginBottom: verticalScale(2),
     textAlign: 'center',
     fontFamily: 'PrimaryFontBold'
   },
@@ -122,8 +122,8 @@ const styles = StyleSheet.create({
     ...globalStyles.subTitle,
     color: Colors.text.onDark,
     textAlign: 'center',
-    marginBottom: 20,
-    lineHeight: 20,
+    marginBottom: verticalScale(22),
+    lineHeight: verticalScale(20),
   },
   startGameButton: {
     ...globalStyles.buttonLarge,
@@ -134,25 +134,22 @@ const styles = StyleSheet.create({
     color: Colors.text.primaryTitle,
   },
   scrollRow: {
-    paddingVertical: 12,
-    paddingRight: 12,
+    paddingVertical: verticalScale(12),
+    paddingRight: scale(12),
   },
-
   sectionsCategories: {
     backgroundColor: Colors.background.light,
-    borderRadius: 12,
-    marginTop: 20,
+    borderRadius: moderateScale(12),
+    marginTop: verticalScale(20),
   },
-
   textSectionsCategories: {
     ...globalStyles.mainTitle,
     fontWeight: 'bold',
     color: Colors.text.primaryTitle,
     textAlign: 'left',
-    marginTop: 25,
-    marginBottom: -12,
+    marginTop: verticalScale(25),
+    marginBottom: verticalScale(-12),
   },
-
 });
 
 export default HomeScreen;
