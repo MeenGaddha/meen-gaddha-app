@@ -14,6 +14,7 @@ const CustomInput = ({
   value,               
   onChangeText,        
   textAlign = 'right', 
+  editable = true,
 }) => {
 
   const [passwordVisible, setPasswordVisible] = useState(false); 
@@ -40,12 +41,13 @@ const CustomInput = ({
         secureTextEntry={secure && !passwordVisible} 
         value={value}                  
         onChangeText={onChangeText}    
-        textAlign={textAlign}   
+        textAlign={textAlign}  
+        editable={editable} 
         onFocus={() => setIsFocused(true)}       
         onBlur={() => setIsFocused(false)}       
       />
 
-      {secure && (
+      {secure && editable && (
         <TouchableOpacity
           onPress={() => setPasswordVisible(!passwordVisible)}
           style={styles.eyeButton}

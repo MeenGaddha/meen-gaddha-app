@@ -49,7 +49,6 @@ const globalStyles = StyleSheet.create({
   mainTitle: {
     fontSize: moderateScale(16),
     fontFamily: Fonts.PrimaryFontBold,
-    fontWeight: 'bold',                    //Edited
   },
   subTitle: {
     fontSize: moderateScale(14),

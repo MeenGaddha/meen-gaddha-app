@@ -3,7 +3,7 @@
   "data": [
     {
       "path": "assets/fonts/Fonts.js",
-      "sha1": "687e4492936de139230c2a50f7195003944c12db"
+      "sha1": "060f61c37babd27e899dbd814385194d08c887ba"
     },
     {
       "path": "assets/fonts/Tajawal-Black.ttf",
@@ -20,6 +20,10 @@
     {
       "path": "assets/fonts/Tajawal-Regular.ttf",
       "sha1": "03b61c8af3509f93599cf118fd8be91b3f7ceedd"
+    },
+    {
+      "path": "assets/fonts/Tajawal.ttf",
+      "sha1": "86c33e621bb9eecabcb569994ae1edf2dbd3bfd6"
     }
   ]
 }

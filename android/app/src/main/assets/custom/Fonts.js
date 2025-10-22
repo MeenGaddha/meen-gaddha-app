@@ -1,4 +1,4 @@
 export const Fonts ={
-    PrimaryFontBold:"Tajawal-Bold",
+    PrimaryFontBold:"Tajawal",
     fontMedium:"Tajawal-Medium",
 };
