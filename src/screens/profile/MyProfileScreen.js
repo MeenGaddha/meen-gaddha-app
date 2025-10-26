@@ -7,7 +7,6 @@ import Header from '../../components/shared/Header';
 import { useNavigation } from '@react-navigation/native';
 import ProfileImagePicker from '../../components/shared/ProfileImagePicker';
 import CustomInput from '../../components/shared/CustomInput'
-import { Fonts } from '../../../assets/fonts/Fonts';
 
 
 const MyProfileScreen = () => {
@@ -36,7 +35,7 @@ const MyProfileScreen = () => {
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={[globalStyles.subTitle, { color: Colors.text.default }, styles.labelText]}>الاسم الكامل</Text>
+        <Text style={[globalStyles.subTitle, { color: Colors.text.default }, styles.labelText]}>البريد الإلكتروني </Text>
         <CustomInput
           placeholder=' mohamemd@gmail.com '
           value={email}
@@ -46,7 +45,7 @@ const MyProfileScreen = () => {
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={[globalStyles.subTitle, { color: Colors.text.default }, styles.labelText]}>الاسم الكامل</Text>
+        <Text style={[globalStyles.subTitle, { color: Colors.text.default }, styles.labelText]}>كلمة المرور</Text>
         <CustomInput
           placeholder='* * * * * * * * * *'
           value={password}
@@ -74,7 +73,7 @@ const MyProfileScreen = () => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={[globalStyles.buttonFull, styles.button2]}
-         onPress={() => navigation.navigate('HomeScreen')}>
+         onPress={() => navigation.navigate('ContactUs')}>
           <Text style={[globalStyles.mainTitle, { color: Colors.text.primaryTitle }]}> حذف الحساب</Text>
         </TouchableOpacity>
       </View>
