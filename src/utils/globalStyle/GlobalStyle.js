@@ -33,10 +33,12 @@ const globalStyles = StyleSheet.create({
   buttonAid: {                           //ازار وسائل المساعده
     width: scale(27),
     height: verticalScale(25),
-    borderRadius: moderateScale(8),
+    borderRadius: moderateScale(20),
+    borderWidth: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: colors.button.AidButtons,
+    borderColor: colors.border.light,
   },
   buttonText: {                           //نص داخل الازرار
     color: colors.button.text,

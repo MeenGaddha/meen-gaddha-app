@@ -3,7 +3,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/homeScreen/HomeScreen';
-// import CategoryScreen from '../screens/categoryScreen/CategoryScreen';
+//import CategoryScreen from '../screens/categoryScreen/CategoryScreen';
 import Header from '../components/shared/Header';
 import BottomTab from '../components/shared/BottomTab';
 import GameInstructions1 from "../screens/Instrucation/GameInstructions.js";
@@ -14,6 +14,7 @@ import MyProfileScreen from '../screens/profile/MyProfileScreen.js';
 import EditPasswordScreen from '../screens/profile/EditPasswordScreen.js';
 
 
+import GameDescriptionScreen from '../screens/gameDescriptionScreen/GameDescriptionScreen'
 
 
 
@@ -31,7 +32,8 @@ const MainStack = () => {
       >
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        {/* <Stack.Screen name="CategoryScreen" component={CategoryScreen} />      */}
+
+        {/*<Stack.Screen name="CategoryScreen" component={CategoryScreen} />    */}
         <Stack.Screen name="Header" component={Header} />
         <Stack.Screen name="BottomTab" component={BottomTab} />
         <Stack.Screen name="GameInstructions1" component={GameInstructions1} />
@@ -39,6 +41,8 @@ const MainStack = () => {
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="ProfileScreen" component={MyProfileScreen} />
         <Stack.Screen name="EditPassword" component={EditPasswordScreen} />
+        <Stack.Screen name="GameDescriptionScreen" component={GameDescriptionScreen} />
+
 
       </Stack.Navigator>
     </NavigationContainer>

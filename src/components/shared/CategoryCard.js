@@ -1,13 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Colors from '../../utils/colors/Colors';
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+import globalStyles from '../../utils/globalStyle/GlobalStyle';
 
 const CategoryCard = ({ title, image: Icon }) => {
   return (
     <View style={styles.card}>
       {/* SVG  */}
       <View style={styles.imageWrapper}>
-        <Icon width="100%" height="100%" preserveAspectRatio="xMidYMid meet" />
+        <Icon width={scale(100)} height={verticalScale(100)}  />
       </View>
 
       {/* Title */}
@@ -20,17 +22,17 @@ const CategoryCard = ({ title, image: Icon }) => {
 
 const styles = StyleSheet.create({
   card: {
-    width: 120,
-    height: 150,
-    borderRadius: 12,
-    marginRight: 12,
+    width: scale(100),
+    height: verticalScale(110),
+    borderRadius: moderateScale(12),
+    marginLeft: verticalScale(10),
     backgroundColor: '#fff',
     overflow: 'hidden',
     shadowColor: '#000',
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 3, // للـ Android
+    shadowRadius: moderateScale(4),
+    shadowOffset: { height: verticalScale(2) },
+    elevation: moderateScale(3), // للـ Android
   },
   imageWrapper: {
     flex: 1,
@@ -43,13 +45,12 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     backgroundColor: Colors.background.dark,
-    paddingVertical: 4,
+    paddingVertical: verticalScale(3),
     alignItems: 'center',
   },
   label: {
     color: '#fff',
-    fontSize: 14,
-    fontWeight: 'bold',
+    ...globalStyles.subTitle,
   },
 });
 
