@@ -23,8 +23,8 @@ const globalStyles = StyleSheet.create({
     alignItems: "center",
   },
   buttonFull: {                           //زر البروفايل والدفع
-    width: scale(360),
-    height: verticalScale(35),
+    width: scale(320),
+    height: verticalScale(30),
     borderRadius: moderateScale(10),
     backgroundColor: colors.button.primary,
     justifyContent: "center",

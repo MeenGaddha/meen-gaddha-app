@@ -42,7 +42,7 @@ const MyProfileScreen = () => {
           value={email}
           onChangeText={setEmail}
           textAlign='right'
-          
+
         />
       </View>
       <View style={styles.inputContainer}>
@@ -52,7 +52,7 @@ const MyProfileScreen = () => {
           value={password}
           onChangeText={setPassword}
           textAlign='right'
-          editable={false}  
+          editable={false}
         />
       </View>
       <View>
@@ -65,8 +65,18 @@ const MyProfileScreen = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <View style={[globalStyles.buttonFull, styles.buttonContainer]}>
-        <Text> حفظ </Text>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={[globalStyles.buttonFull, styles.button1]}
+         onPress={() => navigation.navigate('HomeScreen')}>
+          <Text style={[globalStyles.mainTitle, { color: Colors.text.onDark }]}> حفظ </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={[globalStyles.buttonFull, styles.button2]}
+         onPress={() => navigation.navigate('HomeScreen')}>
+          <Text style={[globalStyles.mainTitle, { color: Colors.text.primaryTitle }]}> حذف الحساب</Text>
+        </TouchableOpacity>
       </View>
 
 
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: Colors.text.primaryTitle,
     paddingBottom: verticalScale(1),
-    width:scale(104)
+    width: scale(104)
   },
   inputContainer: {
     marginTop: verticalScale(15)
@@ -100,6 +110,15 @@ const styles = StyleSheet.create({
     marginTop: verticalScale(35)
   },
   buttonContainer:{
-marginTop:verticalScale(40)
+    alignItems:'center',
+  },
+  button1: {
+    marginTop: verticalScale(40)
+  },
+  button2: {
+    backgroundColor:"#ffffff",
+    marginTop: verticalScale(10),
+    borderColor: Colors.text.primaryTitle,
+    borderWidth:1.5
   },
 })
