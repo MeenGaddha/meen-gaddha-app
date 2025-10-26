@@ -40,7 +40,9 @@ const GameDescriptionScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Header onProfilePress={() => navigation.navigate('SignIn')} />
+      <Header  
+      showProfile={true}
+      onProfilePress={() => navigation.navigate('SignIn')}  />
 
       <SafeAreaView style={styles.content} edges={['left', 'right']}>
         <ScrollView contentContainerStyle={{ paddingBottom: verticalScale(180) }} showsVerticalScrollIndicator={false}>

@@ -11,6 +11,9 @@ import SplashScreen from "../screens/auth/SplashScreen.js";
 import SignUpScreen from "../screens/auth/SignUpScreen.js";
 import SignInScreen from "../screens/auth/SignInScreen.js";
 import MyProfileScreen from '../screens/profile/MyProfileScreen.js';
+import EditPasswordScreen from '../screens/profile/EditPasswordScreen.js';
+
+
 import GameDescriptionScreen from '../screens/gameDescriptionScreen/GameDescriptionScreen'
 
 
@@ -37,6 +40,7 @@ const MainStack = () => {
         <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="ProfileScreen" component={MyProfileScreen} />
+        <Stack.Screen name="EditPassword" component={EditPasswordScreen} />
         <Stack.Screen name="GameDescriptionScreen" component={GameDescriptionScreen} />
 
 

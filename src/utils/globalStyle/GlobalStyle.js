@@ -23,8 +23,8 @@ const globalStyles = StyleSheet.create({
     alignItems: "center",
   },
   buttonFull: {                           //زر البروفايل والدفع
-    width: scale(360),
-    height: verticalScale(35),
+    width: scale(320),
+    height: verticalScale(30),
     borderRadius: moderateScale(10),
     backgroundColor: colors.button.primary,
     justifyContent: "center",
@@ -51,7 +51,6 @@ const globalStyles = StyleSheet.create({
   mainTitle: {
     fontSize: moderateScale(16),
     fontFamily: Fonts.PrimaryFontBold,
-    fontWeight: 'bold',                    //Edited
   },
   subTitle: {
     fontSize: moderateScale(14),
